@@ -4,5 +4,5 @@
 DIRECTORIES = (
     ('./', 'pelican --s settings.py -t theme content/'),
 ) 
-IGNORE_DIRECTORIES = ('output/', 'theme/sass/')
+IGNORE_DIRECTORIES = ('output/', 'theme/sass/', '.git/')
 IGNORE_EXTENSIONS = ('swp',)
