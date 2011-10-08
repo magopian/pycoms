@@ -36,14 +36,11 @@
                     <li {% if p == page %}class="active"{% endif %}><a href="{{ SITEURL }}/pages/{{ p.url }}">{{ p.title }}</a></li>
                 {% endfor %}
                 {% endif %}
-                {#{% for cat, null in categories %}
+                {% for cat, null in categories %}
                     <li {% if cat == category %}class="active"{% endif %}><a href="{{ SITEURL }}/category/{{ cat }}.html">{{ cat }}</a></li>
-                {% endfor %}#}
+                {% endfor %}
                 </ul></nav>
-        </header><!-- /#banner -->
-
-        {% block content %}
-        {% endblock %}
+        </header><!--! #banner -->
 
         <aside id="sidebar">
                 <div class="widget">
@@ -62,7 +59,7 @@
                             <li><a href="{{ link }}">{{ name }}</a></li>
                         {% endfor %}
                         </ul>
-                </div><!-- /.blogroll -->
+                </div><!--! .blogroll -->
         {% endif %}
         {% if SOCIAL %}
                 <div class="widget social">
@@ -77,17 +74,18 @@
                             <li><a href="{{ link }}">{{ name }}</a></li>
                         {% endfor %}
                         </ul>
-                </div><!-- /.social -->
+                </div><!--! .social -->
         {% endif %}
-        </aside><!-- /#sidebar -->
+        </aside><!--! #sidebar -->
+
+        {% block content %}
+        {% endblock %}
 
         <footer id="footer" class="body">
                 <address id="about" class="vcard body">
                 Proudly powered by <a href="http://alexis.notmyidea.org/pelican/">pelican</a>, which takes great advantages of <a href="http://python.org">python</a>.
-                </address><!-- /#about -->
-
-                <p>The theme is «notmyidea-cms», a modified version of «notmyidea», the default theme.</p>
-        </footer><!-- /#footer -->
+                </address><!--! #about -->
+        </footer><!--! #footer -->
 
 {% include 'analytics.html' %}
 </body>
